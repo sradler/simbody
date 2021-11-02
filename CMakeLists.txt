@@ -44,7 +44,7 @@ option(SIMBODY_COVERAGE
 # Declare the option to install documentation
 option(INSTALL_DOCS
        "Install documentation."
-       ON)
+       OFF)
 
 # Check compiler version
 if(MSVC)
@@ -195,20 +195,20 @@ set(SimTKSIMBODY_STATIC_LIBRARY_VN ${SimTKSIMBODY_LIBRARY_NAME_VN}_static)
 # Caution: this variable is automatically created by the CMake
 # enable_testing() command, but we'll take it over here for
 # our own purposes too.
-set(BUILD_TESTING ON CACHE BOOL
+set(BUILD_TESTING OFF CACHE BOOL
     "Control building of Simbody test programs.
     To actually build tests, one
     or both of BUILD_TESTS_AND_EXAMPLES_STATIC and
     BUILD_TESTS_AND_EXAMPLES_SHARED must be ON.")
 
-set(BUILD_EXAMPLES ON CACHE BOOL
+set(BUILD_EXAMPLES OFF CACHE BOOL
     "Control building of Simbody example programs.
     To actually build examples, one
     or both of BUILD_TESTS_AND_EXAMPLES_STATIC and
     BUILD_TESTS_AND_EXAMPLES_SHARED must be ON.")
 
 # Set whether to build the Visualizer code.
-set(BUILD_VISUALIZER ON CACHE BOOL
+set(BUILD_VISUALIZER OFF CACHE BOOL
     "Control building of the visualizer component.")
 
 # Turning this off reduces the build time (and space) substantially,
